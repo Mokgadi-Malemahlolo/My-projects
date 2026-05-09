@@ -1,0 +1,26 @@
+
+
+
+
+
+h1{
+    color:pink;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h2{color: pink;
+font-family: 'Courier New', Courier, monospace;
+}
+ul{
+list-style-type: circle;
+}
+h3{
+color: palevioletred;
+
+}
+a {
+    text-decoration-line: none ;
+    color: black;
+}
+   a:hover{
+    background-color: pink;
+   }

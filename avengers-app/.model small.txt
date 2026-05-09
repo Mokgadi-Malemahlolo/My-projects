@@ -1,0 +1,57 @@
+.model small
+.stack 100h
+
+.data
+    prompt1 db 'Enter first digit (0-9): $'
+    prompt2 db 13,10, 'Enter second digit (0-9): $'
+    resultMsg db 13,10, 'The result is: $'
+    newline db 13,10, '$'
+
+.code
+main:
+    mov ax, @data
+    mov ds, ax
+
+    ; Prompt for first digit
+    mov ah, 09h
+    lea dx, prompt1
+    int 21h
+
+    ; Read first character
+    mov ah, 01h
+    int 21h
+    sub al, 30h         ; Convert ASCII to integer
+    mov bl, al          ; Store first digit in BL
+
+    ; Prompt for second digit
+    mov ah, 09h
+    lea dx, prompt2
+    int 21h
+
+    ; Read second character
+    mov ah, 01h
+    int 21h
+    sub al, 30h         ; Convert ASCII to integer
+    mov bh, al          ; Store second digit in BH
+
+    ; Add the two digits
+    mov al, bl
+    add al, bh          ; AL = bl + bh
+
+    ; Convert result to ASCII
+    add al, 30h
+
+    ; Print result message
+    mov ah, 09h
+    lea dx, resultMsg
+    int 21h
+
+    ; Print result character
+    mov dl, al
+    mov ah, 02h
+    int 21h
+
+    ; Exit program
+    mov ah, 4Ch
+    int 21h
+end main
