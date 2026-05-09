@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f5f0eb; /* warm nude background */
+  color: #3a3530;            /* dark brown text */
+  min-height: 100vh;         /* fills the full screen height */
+}
+
+header {
+  background-color: #ede7df; /* slightly darker nude */
+  border-bottom: 1px solid #d9cfc6;
+  padding: 3rem 2rem 2.5rem;
+  text-align: center;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;          /* makes it a circle */
+  background-color: #e8c4cc;   /* soft pink */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #8b3a4a;              /* dark pink text */
+  margin: 0 auto 1.25rem;      /* centers it horizontally */
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 2px;         /* spreads the letters apart */
+  text-transform: uppercase;   /* makes it all caps */
+  color: #3a3530;
+}
+
+.role {
+  margin-top: 0.5rem;
+  font-size: 14px;
+  color: #8a7f77;              /* muted grey */
+  letter-spacing: 1px;
+}
+
+.bio {
+  margin-top: 0.75rem;
+  font-size: 13px;
+  color: #a89f97;
+  max-width: 380px;            /* stops it from stretching too wide */
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;            /* spacing between lines */
+  font-style: italic;
+}
+
+.divider {
+  width: 40px;
+  height: 2px;
+  background-color: #e8c4cc;
+  margin: 1.25rem auto 0;
+}
+
+main {
+  max-width: 900px;            /* stops it from stretching on big screens */
+  margin: 3rem auto;           /* centers it on the page */
+  padding: 0 1.5rem;
+}
+
+/* "SIDE PROJECTS" small label */
+.section-title {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #a89f97;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background-color: #faf7f4;
+  border: 1px solid #ddd5cc;
+  border-radius: 12px;         /* rounded corners */
+  padding: 1.5rem;
+  text-decoration: none;       /* removes underline from the link */
+  color: inherit;              /* keeps the text color from body */
+  display: block;
+  transition: transform 0.2s, border-color 0.2s; /* smooth hover effect */
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #e8c4cc;       /* border turns pink on hover */
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+/* Each card icon has its own background color */
+.icon-calc     { background-color: #f0e8e0; } /* warm beige */
+.icon-avengers { background-color: #f5e0e3; } /* soft pink */
+.icon-zoo      { background-color: #e0ede5; } /* soft green */
+.icon-contact  { background-color: #e8e0f0; } /* soft purple */
+
+/* Project name */
+.card h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #3a3530;
+  margin-bottom: 0.4rem;
+}
+
+/* Project description */
+.card p {
+  font-size: 13px;
+  color: #8a7f77;
+  line-height: 1.5;
+}
+
+/* "View project →" text at the bottom of each card */
+.card-arrow {
+  margin-top: 1.25rem;
+  font-size: 13px;
+  color: #c49aa4;              /* pink */
+  letter-spacing: 1px;
+}
+
+/* ══════════════════════════════════════
+   FOOTER
+   The bottom of the page with your GitHub link
+══════════════════════════════════════ */
+footer {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  font-size: 12px;
+  color: #b0a49c;
+  letter-spacing: 1px;
+  border-top: 1px solid #ddd5cc;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #c49aa4;              /* pink link */
+  text-decoration: none;       /* no underline */
+}
